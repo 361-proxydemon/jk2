@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="referrer" content="no-referrer" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" id="tab-favicon" href="/assets/media/favicon/thesaurus.png" />
+  <title id="page-title">CCISD</title>
+  <link rel="stylesheet" href="/assets/css/global.css" />
+  <link rel="stylesheet" href="/assets/css/home.css" />
+  <link rel="stylesheet" href="/assets/css/nav.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="/assets/js/storage.js"></script>
+  <script src="/assets/js/main.js"></script>
+</head>
+<body class="ccisd-home">
+  <div class="nav-bar" aria-hidden="true"></div>
+  <main class="home-content">
+    <section class="brand-block" aria-label="CCISD home">
+      <h1 class="title">ccisd</h1>
+      <p id="splash">credits to J.</p>
+    </section>
+
+    <form id="search-form" class="search-container" method="POST">
+      <i class="fa-solid fa-magnifying-glass search-icon" aria-hidden="true"></i>
+      <input id="input" class="truncate" placeholder="Search for anything!" type="text" autocomplete="off" />
+      <button class="search-submit" type="submit" aria-label="Search"><i class="fa-solid fa-arrow-right"></i></button>
+    </form>
+
+    <section class="shortcuts" aria-label="Shortcuts">
+      <button id="add-shortcut" class="add-shortcut" type="button" aria-label="Add shortcut">
+        <span class="add-icon"><i class="fa-solid fa-plus"></i></span>
+        <span>Add</span>
+      </button>
+      <div id="shortcut-list" class="shortcut-list"></div>
+    </section>
+
+    <section class="clock-card" aria-label="Current time and date">
+      <time id="clock-time">--:-- AM</time>
+      <span id="clock-date">Loading date…</span>
+    </section>
+  </main>
+
+  <footer class="page-meta"><span>Page: 608 ms</span><span>v3.1.0.2 · 192f1b61</span></footer>
+  <script src="/assets/js/vendor.js"></script>
+  <script src="/assets/js/search.js"></script>
+  <script src="/assets/js/home.js"></script>
+  <script src="./assets/ultraviolet/uv.bundle.js"></script>
+  <script src="./assets/ultraviolet/uv.config.js"></script>
+  <script src="/assets/scramjet/scramjet.all.js"></script>
+  <script src="/assets/scramjet/scramjet.config.js"></script>
+  <script src="/assets/js/analytics.js"></script>
+</body>
+</html>

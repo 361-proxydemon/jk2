@@ -1,0 +1,14 @@
+node_modules
+dist
+build
+data/ 
+decoy/
+test/
+tests/
+analysis/
+
+.idea
+.DS_Store
+.hintrc
+.gitpod.yml 
+*.env

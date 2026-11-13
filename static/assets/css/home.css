@@ -1,0 +1,158 @@
+/* CCISD-inspired start page */
+.ccisd-home {
+   --ccisd-pink: #f05b86;
+   --ccisd-pink-light: #ff7a9f;
+   --ccisd-bg: #090304;
+   min-height: 100vh;
+   margin: 0;
+   overflow: hidden;
+   color: #f8edf0;
+   background: var(--ccisd-bg) !important;
+   background-image: radial-gradient(ellipse at 50% 34%, rgba(93, 18, 43, .13), transparent 42%) !important;
+}
+
+.ccisd-home .nav-bar { display: none !important; }
+.ccisd-home .home-content {
+   position: absolute;
+   inset: 0;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: flex-start;
+   padding: clamp(105px, 24vh, 190px) 22px 60px;
+   box-sizing: border-box;
+   z-index: 2;
+}
+
+.brand-block { text-align: center; margin-bottom: 29px; }
+.ccisd-home .title {
+   margin: 0;
+   color: var(--ccisd-pink);
+   font-family: "Inter", sans-serif;
+   font-size: clamp(48px, 4.3vw, 68px);
+   line-height: 1;
+   font-weight: 800;
+   letter-spacing: -3px;
+   text-transform: lowercase;
+   text-shadow: 0 0 14px rgba(240, 91, 134, .28), 0 0 36px rgba(240, 91, 134, .13);
+   transition: transform .25s ease;
+}
+.ccisd-home .title:hover { transform: translateY(-2px); }
+#splash {
+   margin: 11px 0 0;
+   padding: 0;
+   color: #f4e9ec;
+   font-family: "Inter", sans-serif;
+   font-size: 13px;
+   font-weight: 600;
+   letter-spacing: -.2px;
+   animation: none;
+}
+
+.ccisd-home .search-container {
+   position: relative;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   width: min(620px, 90vw);
+   height: 49px;
+   padding: 0 9px 0 45px;
+   box-sizing: border-box;
+   border: 1px solid rgba(255,255,255,.055);
+   border-radius: 15px;
+   background: rgba(29, 12, 17, .84);
+   box-shadow: 0 8px 30px rgba(0,0,0,.18);
+   gap: 0;
+   text-align: left;
+}
+.search-icon { position: absolute; left: 19px; color: #d8bdc5; font-size: 14px; }
+.ccisd-home #input.truncate {
+   flex: 1;
+   min-width: 0;
+   width: 100%;
+   height: 100%;
+   padding: 0;
+   border: 0;
+   outline: 0;
+   border-radius: 0;
+   color: #fff0f4;
+   background: transparent;
+   box-shadow: none;
+   font: 400 13px "Inter", sans-serif;
+   text-align: left;
+}
+.ccisd-home #input::placeholder { color: #d8c3ca; opacity: 1; }
+.ccisd-home #input:hover, .ccisd-home #input:focus { background: transparent; border: 0; }
+.search-submit {
+   display: grid;
+   place-items: center;
+   flex: 0 0 33px;
+   width: 33px;
+   height: 33px;
+   border: 0;
+   border-radius: 11px;
+   color: #260b13;
+   background: var(--ccisd-pink);
+   cursor: pointer;
+   font-size: 14px;
+   transition: background .2s ease, transform .2s ease;
+}
+.search-submit:hover { background: var(--ccisd-pink-light); transform: translateX(2px); }
+
+.shortcuts { display: flex; flex-direction: column; align-items: center; margin-top: 22px; }
+.add-shortcut {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 7px;
+   padding: 0;
+   border: 0;
+   color: #f6edf0;
+   background: transparent;
+   font: 500 12px "Inter", sans-serif;
+   cursor: pointer;
+}
+.add-icon {
+   display: grid;
+   place-items: center;
+   width: 53px;
+   height: 53px;
+   border: 1px dashed rgba(255,255,255,.27);
+   border-radius: 15px;
+   color: #f5e6eb;
+   font-size: 17px;
+   transition: background .2s ease, border-color .2s ease;
+}
+.add-shortcut:hover .add-icon { background: rgba(240,91,134,.1); border-color: var(--ccisd-pink); }
+.shortcut-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin-top: 18px; }
+.shortcut-item { position: relative; display: flex; flex-direction: column; align-items: center; gap: 6px; width: 68px; color: #f5e6eb; text-decoration: none; font-size: 11px; }
+.shortcut-item .shortcut-icon { display: grid; place-items: center; width: 43px; height: 43px; border: 1px solid rgba(255,255,255,.08); border-radius: 13px; background: rgba(255,255,255,.045); color: var(--ccisd-pink-light); font-size: 16px; }
+.shortcut-item:hover .shortcut-icon { background: rgba(240,91,134,.12); }
+.shortcut-remove { position: absolute; top: -5px; right: 4px; display: none; border: 0; border-radius: 50%; width: 17px; height: 17px; color: white; background: #a82d50; cursor: pointer; font-size: 10px; }
+.shortcut-item:hover .shortcut-remove { display: block; }
+
+.clock-card {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   width: 198px;
+   height: 160px;
+   margin-top: 43px;
+   border: 1px solid rgba(255,255,255,.055);
+   border-radius: 13px;
+   background: rgba(28, 13, 18, .72);
+   box-shadow: 0 8px 30px rgba(0,0,0,.13);
+}
+#clock-time { color: #fff8fa; font-size: 32px; line-height: 1.2; font-weight: 750; letter-spacing: -1.1px; font-variant-numeric: tabular-nums; }
+#clock-date { margin-top: 5px; color: #d5c3c9; font-size: 11px; }
+.page-meta { position: fixed; right: 21px; bottom: 13px; display: flex; flex-direction: column; align-items: flex-end; gap: 3px; color: rgba(235,216,223,.62); font-size: 10px; z-index: 2; }
+
+@media (max-width: 600px) {
+   .ccisd-home .home-content { padding-top: 20vh; }
+   .ccisd-home .title { font-size: 54px; }
+   .ccisd-home .search-container { width: min(92vw, 620px); }
+   .clock-card { margin-top: 35px; width: 180px; height: 145px; }
+   #clock-time { font-size: 29px; }
+}
