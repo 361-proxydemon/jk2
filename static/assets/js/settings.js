@@ -1,3 +1,5 @@
+// The build replaces this name to match the bundled Scramjet database.
+const ACTIVE_SCRAMJET_DB_NAME = "$scramjet";
 
 function tokenizeDropdowns() {
   const nativeValue = Object.getOwnPropertyDescriptor(HTMLSelectElement.prototype, "value");
